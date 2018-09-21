@@ -17,3 +17,9 @@ void MainWindow::on_action_Exit_triggered()
 {
     QApplication::quit();
 }
+
+void MainWindow::on_btnEdfBrowse_clicked()
+{
+    QString filename = QFileDialog::getOpenFileName(this, tr("Open File"));
+    ui->txtEdfFile->setText(filename);
+}
