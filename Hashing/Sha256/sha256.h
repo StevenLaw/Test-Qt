@@ -1,6 +1,7 @@
 #ifndef SHA256_H
 #define SHA256_H
 #include <string>
+#include <QString>
 
 class Sha256
 {
@@ -25,6 +26,9 @@ class Sha256
         unsigned char m_block[2*SHA224_256_BLOCK_SIZE];
         uint32 m_h[8];
 };
+
+std::string sha256(std::string input);
+QString sha256(QString input);
 
 #define SHA2_SHFR(x, n)    (x >> n)
 #define SHA2_ROTR(x, n)   ((x >> n) | (x << ((sizeof(x) << 3) - n)))

@@ -108,6 +108,7 @@ void Sha256::final(unsigned char *digest)
     memset(m_block + m_len, 0, pm_len - m_len);
     m_block[m_len] = 0x80;
     SHA2_UNPACK32(len_b, m_block + pm_len - 4);
+    transform(m_block, block_nb);
     for (i = 0; i < 8; i++) {
         SHA2_UNPACK32(m_h[i], &digest[i << 2]);
     }
@@ -129,4 +130,11 @@ std::string sha256(std::string input)
         sprintf(buf+i*2, "%02x", digest[i]);
     }
     return std::string(buf);
+}
+
+QString sha256(QString input)
+{
+    std::string instr = input.toUtf8().data();
+    std::string outstr = sha256(instr);
+    return QString(outstr.c_str());
 }
