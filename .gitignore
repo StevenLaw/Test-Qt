@@ -30,3 +30,9 @@
 *.exe
 *.out
 *.app
+
+# Remove user file
+*.pro.user
+
+# No autosave
+*.autosave
