@@ -24,10 +24,15 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+    Hashing/Sha256/sha256.cpp \
+    main.cpp \
+    mainwindow.cpp
 
 HEADERS += \
-        mainwindow.h
+        mainwindow.h \
+    Hashing/Sha256/sha256.h \
+    mainwindow.h
 
 FORMS += \
         mainwindow.ui

@@ -31,8 +31,9 @@
 *.out
 *.app
 
-# Remove user file
+# Remove user settings
 *.pro.user
+.vscode/*
 
 # No autosave
 *.autosave
