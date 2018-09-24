@@ -1,16 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-#include <string>
-#include <QLoggingCategory>
-
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
-    QStringList hashAlgorithms = {"SHA 256", "MD5"};
+    QStringList hashAlgorithms = {
+        "MD5",
+        "SHA 1",
+        "SHA 2",
+        "SHA 224",
+        "SHA 256",
+        "SHA 384",
+        "SHA 512"
+    };
     ui->cmbHtAlgo->insertItems(0, hashAlgorithms);
     ui->cmbHfAlgo->insertItems(0, hashAlgorithms);
 }
@@ -41,10 +46,17 @@ void MainWindow::on_btnHfBrowse_clicked()
 
 void MainWindow::on_btnHtHash_clicked()
 {
+    QString input = ui->pteHtInput->document()->toPlainText();
+    QString output;
     switch (ui->cmbHtAlgo->currentIndex()) {
         case 0:
-            QString input = ui->pteHtInput->document()->toPlainText();
+            ui->tbHtOutput->setText(md5(input));
+        break;
+        case 1:
+            ui->tbHtOutput->setText(sha1(input));
+        break;
+        case 4:
             ui->tbHtOutput->setText(sha256(input));
-            break;
+        break;
     }
 }

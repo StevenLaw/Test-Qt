@@ -27,12 +27,25 @@ SOURCES += \
         mainwindow.cpp \
     Hashing/Sha256/sha256.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    Hashing/Md5/md5.cpp \
+    Hashing/Sha256/sha256.cpp \
+    main.cpp \
+    mainwindow.cpp \
+    Hashing/Md5/md5.cpp \
+    Hashing/Sha1/sha1.cpp \
+    Hashing/Sha256/sha256.cpp
 
 HEADERS += \
         mainwindow.h \
     Hashing/Sha256/sha256.h \
-    mainwindow.h
+    mainwindow.h \
+    Hashing/Md5/md5.h \
+    Hashing/Sha256/sha256.h \
+    mainwindow.h \
+    Hashing/Md5/md5.h \
+    Hashing/Sha1/sha1.h \
+    Hashing/Sha256/sha256.h
 
 FORMS += \
         mainwindow.ui

@@ -6,6 +6,8 @@
 #include <QFileDialog>
 
 #include <Hashing/Sha256/sha256.h>
+#include <Hashing/Md5/md5.h>
+#include <Hashing/Sha1/sha1.h>
 
 namespace Ui {
 class MainWindow;
