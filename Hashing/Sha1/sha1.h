@@ -52,6 +52,6 @@ private:
 };
  
 std::string sha1(const std::string &string);
-QString sha1(QString input);
+//QString sha1(QString input);
  
 #endif /* SHA1_HPP */

@@ -269,9 +269,9 @@ std::string sha1(const std::string &string)
     return checksum.final();
 }
 
-QString sha1(QString input)
-{
-    std::string instr = input.toUtf8().data();
-    std::string outstr = sha1(instr);
-    return QString(outstr.c_str());
-}
+//QString sha1(QString input)
+//{
+//    std::string instr = input.toUtf8().data();
+//    std::string outstr = sha1(instr);
+//    return QString(outstr.c_str());
+//}

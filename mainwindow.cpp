@@ -53,7 +53,7 @@ void MainWindow::on_btnHtHash_clicked()
             ui->tbHtOutput->setText(md5(input));
         break;
         case 1:
-            ui->tbHtOutput->setText(sha1(input));
+            //ui->tbHtOutput->setText(sha1(input));
         break;
         case 4:
             ui->tbHtOutput->setText(sha256(input));
